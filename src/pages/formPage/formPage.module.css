@@ -1,0 +1,58 @@
+.form {
+    background-color: #f6d889;
+    width: fit-content;
+    border-radius: 24px;
+    padding: 30px 24px;
+    margin: 30px auto;
+    box-shadow: 1px 1px 10px 2px #a9ba61;
+}
+.formFieldArea {
+    margin-bottom: 20px;
+    position: relative;
+}
+.formFieldLabel {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #333333;
+    background-color: #f6d889;
+    position: absolute;
+    top: -8px;
+    left: 10px;
+    padding: 0 5px;
+}
+.formFieldError {
+    font-size: 14px;
+    margin-top: 5px;
+    color: #90050f;
+    text-align: end;
+}
+.formField {
+    border-radius: 16px;
+    background-color: #f6d889;
+    border: 1px solid #333333;
+    width: 300px;
+    padding: 12px;
+    font-size: 16px;
+    color: #333333;
+}
+.formFieldSelector {
+    border-radius: 16px;
+    background-color: #f6d889;
+    border: 1px solid #333333;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    color: #333333;
+}
+.formField:focus, .formFieldSelector:focus {
+    outline-width: 0;
+}
+.submitBtn {
+    color: #ffffff;
+    font-size: 20px;
+    background-color: #6c8149;
+    border-radius: 16px;
+    padding: 10px 15px;
+    border: none;
+    width: 100%;
+}
