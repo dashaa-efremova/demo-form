@@ -23,9 +23,9 @@ const validationSchema = Yup.object().shape({
     specialty: Yup.string(),
     doctor: Yup.string().required('Обов\'язкове поле'),
     email: Yup.string().email('Некоректна адреса електронної пошти'),
-    phone: Yup.string().matches(/^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g, 'Телефон повинен містити лише числа').min(10, 'Телефон повинен містити не менше 10 символів').when("email", {
+    phone: Yup.string().when("email", {
         is: (email) => !email,
-        then: () => Yup.string().required("Імейл або телефон обовʼязкові"),
+        then: () => Yup.string().matches(/^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g, 'Телефон повинен містити лише числа').min(10, 'Телефон повинен містити не менше 10 символів').required("Імейл або телефон обовʼязкові"),
     }),
 })
 
